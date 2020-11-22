@@ -2,7 +2,7 @@
 
 body{
     overflow: hidden;
-    background: black;
+    background: linear-gradient(to right, #000b1b, #0052a2);
 }
 
 input{
@@ -35,7 +35,7 @@ input{
 
 .material-icons.md-36{
     font-size: 36px;
-    color: rgba(255,255,255,0.7);
+    color: ghostwhite;
 }
 
 .btn:hover .md-36{
@@ -67,7 +67,7 @@ input{
     transition-delay: 0.1s;
 }
 .btn:nth-child(4){
-    top: 0;
+    left: 0;
     transition-delay: 0.2s;
 }
 .btn:nth-child(5){
@@ -85,7 +85,7 @@ input{
     transition-delay: 0.5s;
 }
 .btn:nth-child(8){
-    top: 0;
+    left: 0;
     transition-delay: 0.6s;
 }
 .btn:nth-child(9){
@@ -99,3 +99,61 @@ input#toggle:checked ~ #show-menu .btn:nth-child(2){
     top: -150px;
     opacity: 1;
 }
+input#toggle:checked ~ #show-menu .btn:nth-child(3){
+    top: -100px;
+    left: 100px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(4){
+    left: 150px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(5){
+    top: 100px;
+    left: 100px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(6){
+    top: 150px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(7){
+    top: 100px;
+    left: -100px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(8){
+    left: -150px;
+    opacity: 1;
+}
+input#toggle:checked ~ #show-menu .btn:nth-child(9){
+    top: -100px;
+    left: -100px;
+    opacity: 1;
+}
+
+.menuBtn, .closeBtn{
+    position: absolute;
+    transition: all .3s ease;
+
+}
+
+.closeBtn{
+    transform: translateY(50px);
+    opacity: 0;
+
+}
+
+input#toggle:checked ~ #show-menu .btn .menuBtn{
+    transform: translateY(-50px);
+    opacity: 0;
+}
+
+input#toggle:checked ~ #show-menu .btn .closeBtn{
+    transform: translateY(0px);
+    opacity: 1;
+
+}
+
+
+
